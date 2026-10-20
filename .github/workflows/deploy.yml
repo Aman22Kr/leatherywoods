@@ -10,8 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 20, cache: npm }
-      - run: npm ci
+        with: { node-version: 20 }
+      # No lockfile in the repo yet: use npm install. After you commit package-lock.json,
+      # switch this to `npm ci` and add `cache: npm` to setup-node for reproducible, faster builds.
+      - run: npm install
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with: { path: dist }
