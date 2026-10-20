@@ -1,0 +1,4 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+body { @apply font-sans text-ink bg-white; }
+.btn { @apply inline-flex items-center justify-center gap-2 bg-brand text-white px-5 py-2.5 text-sm font-medium transition hover:bg-ink; }
+.btn-o { @apply inline-flex items-center justify-center gap-2 border border-brand text-brand px-5 py-2.5 text-sm font-medium transition hover:bg-brand hover:text-white; }
